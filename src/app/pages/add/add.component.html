@@ -1,0 +1,100 @@
+<app-navbar></app-navbar>
+
+<div class="add-page">
+  <div class="add-page__container">
+    <h2 class="add-page__title">О фильме</h2>
+  </div>
+
+  <form [formGroup]="form" class="add-page__toggle">
+
+    <div class="add-page__toggle-container">
+      <app-toggle formControlName="toggle"></app-toggle>
+    </div>
+
+    <div class="add-page__search" *ngIf="toggle">
+      <h4 class="add-page__input-label">Название</h4>
+      <div class="add-page__input-wrapper">
+        <input
+          type="text"
+          formControlName="searchInput"
+          placeholder="Например, Титаник"
+        />
+        <span class="add-page__clear-icon" (click)="clear()" *ngIf="inputValue"></span>
+      </div>
+
+      <div class="add-page__films films">
+        <div class="films__container">
+
+          <div class="films__film-not-found not-found-film" *ngIf="filmNotFound && inputValue">
+            <div class="not-found-film__image">
+
+            </div>
+            <div class="not-found-film__info">Фильм не найден <a href="#" class="not-found-film__link">Добавьте его вручную</a></div>
+          </div>
+
+          <div class="films__film film" *ngFor="let film of films$ | async">
+            <div class="film__image">
+              <img src="../../../assets/add/preview.png" alt="preview" />
+            </div>
+            <div class="film__name">{{film.name}} <span class="film__year">{{film.year}}</span></div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="add-page__manually manually-add-page" *ngIf="!toggle">
+
+      <div class="manually-add-page__items">
+        <div class="manually-add-page__item">
+          <h4 class="manually-add-page__title">Название</h4>
+          <div class="manually-add-page__input-wrapper">
+            <input type="text" placeholder="Например, Титаник" />
+          </div>
+        </div>
+
+        <div class="manually-add-page__item">
+          <h4 class="manually-add-page__title">Год</h4>
+          <div class="manually-add-page__input-wrapper">
+            <input type="text" placeholder="Укажите год выхода фильма" />
+          </div>
+        </div>
+
+        <div class="manually-add-page__item">
+          <h4 class="manually-add-page__title">Описание</h4>
+          <div class="manually-add-page__input-wrapper">
+            <input type="text" placeholder="Напишите пару слов о сюжете" />
+          </div>
+        </div>
+
+        <div class="manually-add-page__item">
+          <h4 class="manually-add-page__title">Жанр</h4>
+          <div class="manually-add-page__input-wrapper">
+            <input type="text" placeholder="Выберите из списка" />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="manually-add-page__poster">
+        <h4 class="manually-add-page__title">
+          Постер
+        </h4>
+        <div class="manually-add-page__download-button">
+          <span class="manually-add-page__download-icon"></span>
+          <a href="#" class="manually-add-page__download-link">Загрузить фото</a>
+        </div>
+      </div>
+
+      <div class="manually-add-page__button-wrapper">
+        <button class="manually-add-page__save-button">Сохранить</button>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
+

@@ -1,0 +1,242 @@
+.add-page {
+  padding: 0 0 20px 0;
+}
+.add-page__container {}
+.add-page__title {
+  margin: 82px 0 0 0;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 0.374px;
+  color: #000000;
+}
+.add-page__toggle {}
+.add-page__toggle-container {
+  width: 343px;
+  margin: 35px auto 0;
+}
+.add-page__search {
+  margin: 0 auto;
+  width: 473px;
+  padding: 0 16px;
+}
+.add-page__input-label {
+  margin: 40px 0 0 0;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.8px;
+  color: #000000;
+}
+.add-page__input-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.add-page__input-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000000;
+  opacity: 0.2;
+}
+.add-page__input-wrapper input {
+  width: 100%;
+  padding: 19px 0;
+  outline: none;
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  color: #3C3C43;
+
+}
+.add-page__input-wrapper input::placeholder {
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  color: rgba(60, 60, 67, 0.3);
+}
+.add-page__clear-icon {
+  display: inline-block;
+  position: absolute;
+  top: 19px;
+  right: 0 ;
+  width: 40px;
+  height: 42px;
+  background: url("../../../assets/icons/clear.svg") top left no-repeat;
+  cursor: pointer;
+}
+.add-page__films {
+  margin: 20px 0 0 0;
+}
+.films {
+
+}
+.films__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.not-found-film {
+  display: flex;
+}
+.not-found-film__image {
+  width: 63px;
+  height: 81px;
+  background: rgba(0, 0, 0, 0.04);
+}
+.not-found-film__info {
+  margin: 0 0 0 18px;
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  color: #3C3C43;
+}
+.not-found-film__link {
+  display: block;
+  font-size: 10px;
+  line-height: 12px;
+  color: blue;
+}
+.films__container > *:not(:first-child) {
+  margin: 20px 0 0 0;
+}
+.film {
+  display: flex;
+}
+.film__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.film__name {
+  margin: 0 0 0 18px;
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  color: #3C3C43;
+}
+.film__year {
+  display: block;
+}
+.add-page__manually {
+
+}
+.manually-add-page {
+  width: 440px;
+  margin: 40px auto 0;
+  padding: 0 16px;
+}
+.manually-add-page__item:not(:first-child) {
+  margin: 20px 0 0 0;
+}
+.manually-add-page__title {
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.8px;
+  color: #000000;
+}
+.manually-add-page__input-wrapper {
+  position: relative;
+}
+.manually-add-page__input-wrapper:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000000;
+  opacity: 0.2;
+}
+.manually-add-page__input-wrapper input {
+  width: 100%;
+  padding: 19px 0;
+  outline: 0;
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  color: #3C3C43;
+}
+.manually-add-page__input-wrapper input::placeholder {
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  color: rgba(60, 60, 67, 0.3);
+}
+.manually-add-page__poster {
+  margin: 20px 0 0 0;
+}
+.manually-add-page__download-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin: 20px 0 0 0;
+  border-radius: 14px;
+  background: rgba(242, 242, 242, 0.8);
+}
+.manually-add-page__download-icon {
+  display: block;
+  width: 17px;
+  height: 20px;
+  margin: 25px 0 0 0;
+  background: url('../../../assets/icons/save.svg') top left no-repeat;
+}
+.manually-add-page__download-link {
+  margin: 6px 0 0 0;
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.408px;
+  color: rgba(60, 60, 67, 0.3);
+}
+.manually-add-page__button-wrapper {
+  position: relative;
+  width: 155px;
+  margin: 0 auto;
+}
+.manually-add-page__button-wrapper:before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  width: 21px;
+  height: 21px;
+  background: url(../../../assets/icons/save-blue.svg) top left no-repeat;
+  cursor: pointer;
+}
+
+.manually-add-page__save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 0 12px;
+  min-height: 38px;
+  cursor: pointer;
+  margin: 42px 0 0 0;
+  border: 2px solid #002DFF;
+  background: #FFFFFF;
+  border-radius: 21.5px;
+  font-family: 'SF Pro Text', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.336px;
+  color: #002DFF;
+}

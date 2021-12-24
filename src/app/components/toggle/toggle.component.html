@@ -1,0 +1,16 @@
+<div class="toggle">
+  <div class="toggle__button-wrapper">
+    <button
+      (click)="toggle(true)"
+      class="toggle__button"
+      [class.toggle__button_active]="toggleValue"
+    >КиноПоиск</button>
+  </div>
+  <div class="toggle__button-wrapper">
+    <button
+      (click)="toggle(false)"
+      class="toggle__button"
+      [class.toggle__button_active]="!toggleValue"
+    >Вручную</button>
+  </div>
+</div>
